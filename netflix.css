@@ -1,0 +1,304 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100%;
+    background: url(images/NG-en-20250519-TRIFECTA-perspective_6317680c-a179-4725-b38e-a9f982eda1b9_large.jpg);
+    background-repeat: none;
+    background-size: cover;
+    /* background-color: black; */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+}
+
+.header {
+    margin: auto;
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 30px; */
+}
+
+.header button {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 3px;
+
+}
+
+.button {
+    align-items: center;
+    justify-self: center;
+    padding: 6px 12px;
+}
+
+.membership {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 22px;
+    color: white;
+    font-weight: 900%;
+}
+
+.button button {
+    /* padding: 25px 50px; */
+    cursor: pointer;
+    background: rgb(229, 9, 20);
+    color: white;
+    /* padding: none; */
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+
+input {
+    /* padding: 25px 150px; */
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: white;
+}
+
+.header h1 {
+    color: rgb(229, 9, 20);
+}
+
+.button input {
+    width: 400px;
+    height: 50px;
+    font-size: 17px;
+}
+
+.col {
+    display: flex;
+    gap: 50px;
+    background: black;
+    width: 90%;
+    margin-left: 60px;
+    border-radius: 10px;
+    overflow-x: scroll;
+}
+
+.col::-webkit-scrollbar {
+    display: none;
+    object-fit: cover;
+    object-position: 15% 100%;
+}
+
+h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.num h2 {
+    position: absolute;
+    left: -10px;
+    padding-top: 190px;
+    -webkit-text-stroke: 1px white;
+    font-size: 90px;
+    font-weight: 700;
+    color: black;
+}
+
+.cards {
+    position: relative;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+h4 {
+    background-color: black;
+    color: white;
+    margin: 40px 70px;
+}
+
+h6 {
+    color: white;
+    font-size: 25px;
+    margin: 40px 70px;
+}
+
+.scard-container {
+    margin: 40px 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    color: white;
+}
+
+.scard {
+    background: linear-gradient(145deg, rgb(142, 42, 92), #1a1a1a);
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /* padding: 24px; */
+    transition: transform 0.3 ease;
+    text-align: center;
+    margin-right: 0px;
+
+}
+
+.scard :hover {
+    transform: scale(1.05);
+}
+
+.scard-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.scard-text {
+    font-size: 10px;
+    color: #ccc;
+    padding-top: 12px;
+}
+
+.scard svg {
+    padding-left: 100px;
+    padding-top: 100px;
+    width: 200px;
+    height: 175px;
+    margin-left: -50px;
+    /* margin-right: 10px; */
+}
+
+.dig h6 {
+    color: white;
+    /* padding-left: 35px; */
+}
+
+.ask {
+    margin: 10px 0px;
+    align-items: center;
+}
+
+.ask button {
+    height: 70px;
+    width: 1010px;
+    background-color: #414141;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 3px 30px;
+    text-align: left;
+    /* margin-left: auto; */
+}
+
+.accordition-item {
+    /* background-color: #222; */
+    margin-bottom: 10px;
+    border: 1px solid black;
+    /* color: white; */
+}
+
+.accordition {
+    /* max-width: 600px; */
+    margin: auto;
+}
+
+.accordition-button {
+    width: 100%;
+    padding: 15px 20px;
+    font-weight: bold;
+    background: none;
+    outline: none;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordition-button span {
+    flex: 1;
+}
+
+.accordition-button::after {
+    /* content: '+'; */
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.accordition-item.active .accordition-button::after {
+    content: '-';
+}
+
+.accordition-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0px 20px;
+    background-color: none;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transform: transform 0.5s;
+}
+.another{
+    color: white;
+    text-align: center;
+}
+.quest-link{
+    display: flex;
+    justify-content: space-between;
+}
+.quest{
+    padding-top: 70px;
+}
+.quest a{
+    color: white;
+    margin: 140px;
+    margin-left: 140px;
+    margin-top: 70px;
+}
+
+.last{
+    display: flex;
+    padding-top: 30px;
+    font-size: 15px;
+}
+
+.last a {
+    color: white;
+    display: flex;
+    position: relative;
+    left: 90px;
+    margin: 0px 50px 20px;
+}
